@@ -10,4 +10,4 @@ exp05_d02,lgbm,graph_nbr,42,defaults; window=all; decay=0.02,0.9407,0.9972,0.996
 exp05_d05,lgbm,graph_nbr,42,defaults; window=all; decay=0.05,0.9386,0.997,0.9964,0.9774,0.9386,,
 exp05_d10,lgbm,graph_nbr,42,defaults; window=all; decay=0.1,0.9439,0.9962,0.9962,0.9788,0.9439,,
 exp06a,lgbm 2-stage,graph_nbr + nb_scores,42,defaults; model A on raw; OOF grouped by time step (5 folds),0.9427,0.9974,0.9974,0.9792,0.9427,,
-exp06b,lgbm 2-stage,graph_nbr + nb_scores,42,defaults; model A on graph_nbr; OOF grouped by time step (5 folds),0.9512,0.9975,0.9977,0.9821,0.9512,,
+exp06b,lgbm 2-stage,graph_nbr + nb_scores,42,defaults; model A on graph_nbr; OOF grouped by time step (5 folds),0.9512,0.9975,0.9977,0.9821,0.9512,,submissions\exp06b_lgbm_stack_DIAGNOSTIC.csv
