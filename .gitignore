@@ -1,0 +1,15 @@
+# Competition data (provided by Kaggle; too large for GitHub)
+train.csv
+test.csv
+txs_edgelist.csv
+sample_submission.csv
+*publicleaderboard*.csv
+
+# Local working notes, not part of the submission
+BT4012_COMPETITION_CONTEXT.md
+COMPETITION_RULES.md
+
+# Environment / tooling
+.ipynb_checkpoints/
+__pycache__/
+.claude/
