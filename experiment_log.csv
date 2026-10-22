@@ -12,16 +12,16 @@ exp05_d10,lgbm,graph_nbr,42,defaults; window=all; decay=0.1,0.9439,0.9962,0.9962
 exp06a,lgbm 2-stage,graph_nbr + nb_scores,42,defaults; model A on raw; OOF grouped by time step (5 folds),0.9427,0.9974,0.9974,0.9792,0.9427,,,,
 exp06b,lgbm 2-stage,graph_nbr + nb_scores,42,defaults; model A on graph_nbr; OOF grouped by time step (5 folds),0.9512,0.9975,0.9977,0.9821,0.9512,0.95873,submissions\exp06b_lgbm_stack_DIAGNOSTIC.csv,0.9988,0.9863
 exp07,rank average,exp03 + exp06b,42,equal-weight mean of normalised ranks,0.956,0.9975,0.9973,,0.956,0.95837,submissions\exp07_rankavg_exp03_exp06b.csv,0.9989,0.9874
-exp08b,lgbm 2-stage tuned,graph_nbr + nb_scores,42,"B={'learning_rate': 0.02, 'n_estimators': 1000, 'num_leaves': 31, 'min_child_samples': 100, 'colsample_bytree': 0.4, 'subsample': 1.0, 'subsample_freq': 0, 'reg_lambda': 1, 'random_state': 42, 'verbose': -1}; A=defaults",0.9508,0.9979,0.998,,0.9508,,,0.9986,0.9864
+exp08b,lgbm 2-stage tuned,graph_nbr + nb_scores,42,"B={'learning_rate': 0.02, 'n_estimators': 1000, 'num_leaves': 31, 'min_child_samples': 100, 'colsample_bytree': 0.4, 'subsample': 1.0, 'subsample_freq': 0, 'reg_lambda': 1, 'random_state': 42, 'verbose': -1}; A=defaults",0.9508,0.9979,0.998,,0.9508,,submissions\exp08b_DIAGNOSTIC.csv,0.9986,0.9864
 exp08e,rank average,single + 2-stage,42,"B={'learning_rate': 0.02, 'n_estimators': 1000, 'num_leaves': 31, 'min_child_samples': 100, 'colsample_bytree': 0.4, 'subsample': 1.0, 'subsample_freq': 0, 'reg_lambda': 1, 'random_state': 42, 'verbose': -1}; A=defaults",0.956,0.9975,0.9973,,0.956,,,0.9989,0.9874
 exp08s,lgbm tuned,graph_nbr,42,"B={'learning_rate': 0.02, 'n_estimators': 1000, 'num_leaves': 31, 'min_child_samples': 100, 'colsample_bytree': 0.4, 'subsample': 1.0, 'subsample_freq': 0, 'reg_lambda': 1, 'random_state': 42, 'verbose': -1}; A=defaults",0.9561,0.9975,0.9972,,0.9561,,,0.9988,0.9874
-exp09b,lgbm 2-stage extra_trees (model B),graph_nbr + nb_scores,42,"L4: {'extra_trees': True, 'n_estimators': 300, 'learning_rate': 0.05, 'min_child_samples': 50}",0.9466,0.9982,0.9981,,0.9466,,,0.999,0.9855
+exp09b,lgbm 2-stage extra_trees (model B),graph_nbr + nb_scores,42,"L4: {'extra_trees': True, 'n_estimators': 300, 'learning_rate': 0.05, 'min_child_samples': 50}",0.9466,0.9982,0.9981,,0.9466,,submissions\exp09b_DIAGNOSTIC.csv,0.999,0.9855
 exp09e,rank average,exp03 + exp06b + exp09s + exp09b,42,equal weights,0.9502,0.9981,0.9979,,0.9502,,,0.999,0.9863
 exp09f,rank average,exp03 + exp06b + exp09x,42,equal weights,0.9414,0.9982,0.9979,,0.9414,,,0.9988,0.9841
 exp09g,rank average,exp03 + exp06b + exp09s + exp09b + exp09x,42,equal weights,0.9429,0.9984,0.9982,,0.9429,,,0.9989,0.9846
 exp09s,lgbm extra_trees,graph_nbr,42,"L3: {'extra_trees': True, 'n_estimators': 500, 'learning_rate': 0.05, 'colsample_bytree': 0.6}",0.9393,0.998,0.9974,,0.9393,,,0.9985,0.9833
 exp09x,sklearn ExtraTrees 500,graph_nbr + nb_scores,42,"X4: {'max_features': 0.3, 'min_samples_leaf': 5}",0.9047,0.9969,0.9955,,0.9047,,,0.9966,0.9734
-exp10b,lgbm 2-stage,graph_nbr + nb_scores + 2hop scores,42,defaults,0.9585,0.9974,0.9979,,0.9585,,,0.9989,0.9882
+exp10b,lgbm 2-stage,graph_nbr + nb_scores + 2hop scores,42,defaults,0.9585,0.9974,0.9979,,0.9585,,submissions\exp10b_DIAGNOSTIC.csv,0.9989,0.9882
 exp10c,lgbm 2-stage,graph_nbr + nb_scores + 2hop feats + 2hop scores,42,defaults,0.9528,0.9974,0.9975,,0.9528,,,0.9988,0.9866
 exp10e,rank average,exp10s + exp10b,42,defaults,0.9524,0.9976,0.9975,,0.9524,,,0.9988,0.9866
 exp10f,rank average,exp03 + exp06b + exp10s + exp10b,42,defaults,0.9545,0.9976,0.9975,,0.9545,,,0.9989,0.9871
