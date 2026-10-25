@@ -1,9 +1,9 @@
-# Competition data (provided by Kaggle; too large for GitHub)
-train.csv
-test.csv
-txs_edgelist.csv
-sample_submission.csv
+# Competition data (provided by Kaggle; place the four CSVs in data/ — see README)
+data/
 *publicleaderboard*.csv
+
+# Regenerated final submissions (the submitted versions are kept in submissions/)
+submissions/final/
 
 # Local working notes, not part of the submission
 BT4012_COMPETITION_CONTEXT.md
